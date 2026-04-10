@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://pl29098160.profitablecpmratenetwork.com/63/db/93/63db934e42b26d74b0a5ff47b6c86f3a.js"></script>
+<script src="https://pl29098160.profitablecpmratenetwork.com/63/db/93/63db934e42b26d74b0a5ff47b6c86f3a.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CineVerse – Premium Streaming</title>
@@ -518,6 +518,163 @@
     .btn-play,.btn-info{padding:10px 18px;font-size:.82rem;}
   }
 
+
+  /* ══════════════════════════════════════════════════════
+     NEW FEATURES: MONETIZATION & ENGAGEMENT UPGRADE
+     ══════════════════════════════════════════════════════ */
+
+  /* ─── FAKE ACTIVITY BAR ─── */
+  .fake-activity-bar{
+    display:flex;align-items:center;gap:10px;
+    background:linear-gradient(90deg,rgba(239,68,68,0.07),rgba(245,158,11,0.05));
+    border:1px solid rgba(239,68,68,0.2);border-radius:12px;
+    padding:10px 16px;margin-bottom:18px;
+    animation:fadeIn .5s ease;
+  }
+  .activity-pulse{width:8px;height:8px;border-radius:50%;background:#ef4444;flex-shrink:0;
+    animation:actPulse 1.2s infinite;}
+  @keyframes actPulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.6);}}
+  .activity-text{font-size:.8rem;color:var(--text2);flex:1;line-height:1.5;}
+  .activity-text strong{color:var(--text);}
+  .activity-badge{font-size:.68rem;background:rgba(239,68,68,0.15);color:#ef4444;
+    border-radius:20px;padding:3px 9px;font-weight:700;flex-shrink:0;}
+
+  /* ─── MULTI-STEP UNLOCK ─── */
+  .step-track{display:flex;align-items:center;gap:0;margin-bottom:18px;overflow:hidden;}
+  .step-node{display:flex;flex-direction:column;align-items:center;flex:1;gap:6px;}
+  .step-circle{
+    width:34px;height:34px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    font-size:.75rem;font-weight:700;transition:.35s;
+    border:2px solid var(--border);background:rgba(255,255,255,0.04);color:var(--text3);
+    position:relative;z-index:1;
+  }
+  .step-circle.done{background:linear-gradient(135deg,var(--primary),var(--accent2));border-color:transparent;color:#fff;}
+  .step-circle.active{border-color:var(--primary);color:var(--primary);
+    box-shadow:0 0 0 4px rgba(14,165,233,0.15);animation:stepGlow 1.5s infinite;}
+  @keyframes stepGlow{0%,100%{box-shadow:0 0 0 4px rgba(14,165,233,0.15);}50%{box-shadow:0 0 0 8px rgba(14,165,233,0.25);}}
+  .step-lbl{font-size:.6rem;color:var(--text3);text-align:center;line-height:1.3;max-width:60px;}
+  .step-line{flex:1;height:2px;background:var(--border);margin-bottom:22px;transition:.35s;}
+  .step-line.done{background:linear-gradient(90deg,var(--primary),var(--accent2));}
+
+  /* ─── SPIN WHEEL ─── */
+  .spin-wrap{text-align:center;padding:8px 0 4px;}
+  .wheel-outer{
+    position:relative;width:190px;height:190px;margin:0 auto 16px;
+  }
+  .wheel-canvas{width:190px;height:190px;border-radius:50%;display:block;
+    transition:transform 3.5s cubic-bezier(0.17,0.67,0.05,1);}
+  .wheel-ptr{
+    position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+    width:0;height:0;
+    border-left:9px solid transparent;border-right:9px solid transparent;
+    border-top:18px solid var(--accent);
+    filter:drop-shadow(0 2px 6px rgba(245,158,11,0.6));
+    z-index:3;
+  }
+  .wheel-hub{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:28px;height:28px;border-radius:50%;
+    background:var(--bg);border:3px solid var(--border);z-index:3;
+  }
+  .btn-spin{
+    background:linear-gradient(135deg,var(--accent),#ef4444);
+    color:#fff;border:none;padding:11px 30px;border-radius:50px;
+    font-family:'Outfit',sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;
+    transition:.25s;box-shadow:0 4px 20px rgba(245,158,11,0.4);display:inline-flex;align-items:center;gap:6px;
+  }
+  .btn-spin:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(245,158,11,0.6);}
+  .btn-spin:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+  .spin-result-msg{margin-top:10px;font-size:.88rem;font-weight:600;min-height:22px;}
+
+  /* ─── TELEGRAM GATE ─── */
+  .tg-gate-box{
+    background:linear-gradient(135deg,rgba(0,136,204,0.08),rgba(0,100,180,0.03));
+    border:1.5px solid rgba(0,136,204,0.3);border-radius:16px;
+    padding:24px;text-align:center;margin-bottom:14px;
+  }
+  .tg-gate-icon{font-size:2.5rem;margin-bottom:8px;}
+  .tg-gate-title{font-size:1rem;font-weight:700;margin-bottom:6px;}
+  .tg-gate-sub{font-size:.82rem;color:var(--text2);margin-bottom:16px;line-height:1.6;}
+  .btn-tg-join{
+    background:linear-gradient(135deg,#0088cc,#006fa3);
+    color:#fff;border:none;padding:12px 26px;border-radius:50px;
+    font-family:'Outfit',sans-serif;font-size:.9rem;font-weight:700;cursor:pointer;
+    transition:.25s;display:inline-flex;align-items:center;gap:8px;margin-bottom:10px;
+    box-shadow:0 4px 20px rgba(0,136,204,0.35);
+  }
+  .btn-tg-join:hover{transform:translateY(-2px);}
+  .btn-tg-verify{
+    display:block;margin:8px auto 0;
+    background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);
+    color:#10b981;border-radius:30px;padding:9px 22px;
+    font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;transition:.2s;
+  }
+  .btn-tg-verify:hover{background:rgba(16,185,129,0.2);}
+
+  /* ─── PREVIEW FLOW ─── */
+  .preview-box{
+    background:rgba(255,255,255,0.03);border:1px solid var(--border);
+    border-radius:14px;padding:20px;text-align:center;margin-bottom:14px;
+  }
+  .preview-ring{
+    width:80px;height:80px;border-radius:50%;margin:0 auto 12px;
+    position:relative;display:flex;align-items:center;justify-content:center;
+    background:conic-gradient(var(--primary) 0%, rgba(255,255,255,.06) 0%);
+    transition:background .3s;
+  }
+  .preview-ring::before{
+    content:'';position:absolute;width:64px;height:64px;border-radius:50%;background:var(--bg2);
+  }
+  .preview-ring span{position:relative;z-index:2;font-size:1.4rem;font-weight:800;}
+  .preview-status{font-size:.85rem;color:var(--text2);line-height:1.5;}
+
+  /* ─── SCENE PARTS TABS ─── */
+  .scene-tabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px;}
+  .scene-tabs::-webkit-scrollbar{display:none;}
+  .scene-tab-btn{
+    flex-shrink:0;padding:7px 14px;border-radius:30px;border:1px solid var(--border);
+    background:rgba(255,255,255,0.04);color:var(--text2);
+    font-family:'Outfit',sans-serif;font-size:.8rem;font-weight:500;cursor:pointer;transition:.2s;
+  }
+  .scene-tab-btn.active{background:var(--primary);color:#fff;border-color:var(--primary);}
+  .scene-tab-btn.s-locked{color:var(--text3);}
+  .scene-tab-btn.s-done{border-color:rgba(16,185,129,.4);color:#10b981;}
+
+  /* ─── REWARD UNLOCK ─── */
+  .reward-strip{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:linear-gradient(90deg,rgba(245,158,11,0.06),rgba(239,68,68,0.04));
+    border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:10px 14px;margin-top:10px;
+  }
+  .reward-info{flex:1;}
+  .reward-lbl{font-size:.78rem;font-weight:700;color:var(--accent);}
+  .reward-sub{font-size:.68rem;color:var(--text3);margin-top:2px;}
+  .btn-reward{
+    background:linear-gradient(135deg,var(--accent),#ef4444);
+    color:#fff;border:none;padding:7px 14px;border-radius:20px;
+    font-family:'Outfit',sans-serif;font-size:.75rem;font-weight:700;cursor:pointer;
+    transition:.2s;flex-shrink:0;
+  }
+  .btn-reward:hover{transform:translateY(-1px);}
+  .btn-reward:disabled{opacity:.4;cursor:not-allowed;transform:none;}
+
+  /* ─── COUNTDOWN OVERLAY ─── */
+  .countdown-overlay{
+    text-align:center;background:rgba(14,165,233,0.04);
+    border:1px solid rgba(14,165,233,0.15);border-radius:12px;
+    padding:16px;margin:10px 0;
+  }
+  .cd-ring{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:56px;height:56px;border-radius:50%;
+    border:3px solid var(--primary);font-size:1.2rem;font-weight:800;
+    color:var(--primary);margin-bottom:8px;
+    animation:cdPulse 1s infinite;
+  }
+  @keyframes cdPulse{0%,100%{border-color:var(--primary);}50%{border-color:var(--accent2);}}
+  .cd-msg{font-size:.8rem;color:var(--text2);}
+
   /* loader removed — instant open */
   @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
@@ -764,6 +921,17 @@
 
 <!-- MAIN -->
 <main class="main" id="mainContent">
+
+
+  <!-- ── NEW: Fake Live Activity Bar (shown when enabled) ── -->
+  <div class="fake-activity-bar" id="fakeActivityBar" style="display:none;">
+    <div class="activity-pulse"></div>
+    <div class="activity-text" id="fakeActivityText">
+      <strong id="fakeViewerCount">1,245</strong> users watching now &nbsp;·&nbsp; 
+      <strong id="fakeUnlockCount">850</strong> unlocking content
+    </div>
+    <div class="activity-badge" id="fakeActivityBadge">🔴 LIVE</div>
+  </div>
 
   <!-- Category Shortcuts — populated dynamically after movies load -->
   <div class="cat-shortcuts" id="catShortcuts"></div>
@@ -1045,7 +1213,9 @@ async function init() {
     loadAdsConfig(),
     loadBanners(),
     loadCategories(),
+    loadUnlockSettings(),
   ]);
+  startFakeActivity();
   // Movies last so category pills are already populated
   await loadMovies();
 }
@@ -1450,7 +1620,49 @@ function renderWatchSection(movie) {
     return;
   }
 
-  // ── CASE 5: ADS mode — full-width unlock card, compact VIP link below ────
+  // ── CASE 5: ADS mode — check new feature flags first, then fallback to default ──
+
+  // ── NEW: Telegram Gate (runs before everything else) ──
+  const tgJoined = telegramJoined || sessionStorage.getItem('tg_joined') === '1';
+  if (unlockSettings.telegramGateEnabled && !tgJoined) {
+    renderTelegramGate(movie);
+    return;
+  }
+
+  // ── NEW: Preview flow (shown once per movie before unlock) ──
+  if (unlockSettings.previewEnabled && !previewPlayed[movie.id]) {
+    renderPreviewFlow(movie);
+    return;
+  }
+
+  // ── NEW: Scene-based unlock ──
+  if (unlockSettings.sceneEnabled) {
+    renderSceneUnlock(movie);
+    return;
+  }
+
+  // ── NEW: Spin Wheel unlock ──
+  if (unlockSettings.gamifyEnabled && unlockSettings.spinEnabled) {
+    renderSpinWheelUnlock(movie);
+    return;
+  }
+
+  // ── NEW: Multi-step unlock ──
+  if (unlockSettings.stepEnabled) {
+    const totalSteps = parseInt(unlockSettings.totalSteps || 3);
+    const adsPerStep = parseInt(unlockSettings.adsPerStep || 2);
+    const sp = getStepProgress(movie.id);
+    const allDone = sp.completedSteps >= totalSteps;
+    if (!allDone) {
+      renderMultiStepUnlock(movie);
+      return;
+    }
+    // All steps done — show watch now
+    ws.innerHTML = `<div style="text-align:center;"><div style="font-size:.8rem;color:var(--accent);font-weight:600;margin-bottom:14px;background:rgba(14,165,233,.08);border:1px solid rgba(14,165,233,.2);padding:8px 16px;border-radius:30px;display:inline-block;">🎉 All Steps Complete!</div><br><button class="btn-watch-now" onclick="watchNow()" style="width:100%;padding:13px;">▶ Watch Now!</button></div>`;
+    return;
+  }
+
+    // ── CASE 5: ADS mode — full-width unlock card, compact VIP link below ────
   const btnAdLabel = progress === 0
     ? `📢 Watch Ads (0/${req})`
     : unlocked ? '' : `⏳ Continue Ads (${progress}/${req})`;
@@ -1514,6 +1726,7 @@ function renderWatchSection(movie) {
            </button>`}
 
       <div class="ad-cooldown" id="adCooldownMsg" style="margin-top:10px;text-align:center;"></div>
+      \${renderRewardStrip(movie.id)}
 
       ${unlocked ? `
         <div style="text-align:center;margin-top:10px;">
@@ -1568,7 +1781,7 @@ window.watchAd = function(movieId) {
   adCooldown = true;
 
   // ── Countdown timer (15 s) ──────────────────────────────────────────────
-  let secs = 15;
+  let secs = parseInt(unlockSettings.countdownEnabled !== false ? (unlockSettings.countdownSecs || 15) : 15);
   const cdMsg = document.getElementById('adCooldownMsg');
 
   const updateCd = () => {
@@ -2239,6 +2452,636 @@ async function checkUrlMovieParam() {
   };
   attempt();
 }
+
+
+// ══════════════════════════════════════════════════════
+// ─── NEW FEATURES: MONETIZATION UPGRADE ──────────────
+// ══════════════════════════════════════════════════════
+
+// ─── NEW STATE ───
+let unlockSettings = {}; // loaded from settings/unlock
+let telegramJoined = false; // session-only per page load
+let previewPlayed  = {};   // { movieId: true } if preview was already shown
+let sceneCurrentPart = {}; // { movieId: 0 } active part tab
+let spinLocked = false;    // prevent double-spin
+let dailyAdTotal = 0;      // total ads watched today (from localStorage)
+
+// ─── LOAD UNLOCK SETTINGS ───
+async function loadUnlockSettings() {
+  try {
+    const snap = await getDoc(doc(db, 'settings', 'unlock'));
+    if (snap.exists()) {
+      unlockSettings = snap.data();
+    }
+  } catch(e) {
+    console.log('Unlock settings load failed — using defaults');
+  }
+}
+
+// ─── DAILY AD COUNTER (for reward system) ───
+function getTodayKey() {
+  const d = new Date();
+  return d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate();
+}
+function getDailyAdCount() {
+  const key = 'daily_ads_' + getTodayKey();
+  return parseInt(localStorage.getItem(key) || '0');
+}
+function incrementDailyAdCount() {
+  const key = 'daily_ads_' + getTodayKey();
+  const n = getDailyAdCount() + 1;
+  localStorage.setItem(key, n);
+  return n;
+}
+function getDailyRewardUsed() {
+  const key = 'daily_reward_used_' + getTodayKey();
+  return parseInt(localStorage.getItem(key) || '0');
+}
+function incrementDailyRewardUsed() {
+  const key = 'daily_reward_used_' + getTodayKey();
+  const n = getDailyRewardUsed() + 1;
+  localStorage.setItem(key, n);
+}
+
+// ─── SCENE PART PROGRESS ───
+function getSceneProgress(movieId) {
+  const key = 'scene_progress_' + movieId;
+  return parseInt(localStorage.getItem(key) || '0');
+}
+function setSceneProgress(movieId, part) {
+  localStorage.setItem('scene_progress_' + movieId, part);
+}
+
+// ─── FAKE ACTIVITY SYSTEM ───
+let fakeActivityTimer = null;
+function startFakeActivity() {
+  const bar = document.getElementById('fakeActivityBar');
+  if (!bar) return;
+  if (!unlockSettings.fakeActivityEnabled) { bar.style.display = 'none'; return; }
+
+  bar.style.display = 'flex';
+  const baseViewers   = parseInt(unlockSettings.fakeViewers   || 1245);
+  const baseUnlocking = parseInt(unlockSettings.fakeUnlocking || 850);
+
+  function update() {
+    const vFluc = Math.floor(Math.random() * 200) - 100;
+    const uFluc = Math.floor(Math.random() * 150) - 75;
+    const viewers   = Math.max(100, baseViewers   + vFluc);
+    const unlocking = Math.max(50,  baseUnlocking + uFluc);
+    const vc = document.getElementById('fakeViewerCount');
+    const uc = document.getElementById('fakeUnlockCount');
+    if (vc) vc.textContent = viewers.toLocaleString();
+    if (uc) uc.textContent = unlocking.toLocaleString();
+  }
+  update();
+  if (fakeActivityTimer) clearInterval(fakeActivityTimer);
+  fakeActivityTimer = setInterval(update, 3000);
+}
+
+// ─── SMART AD REDIRECT ───
+function openSmartRedirect(adUrl, delayMs, callback) {
+  if (!adUrl) { if(callback) callback(); return; }
+  window.open(adUrl, '_blank');
+  if (callback) setTimeout(callback, delayMs || 2000);
+}
+
+// ─── SPIN WHEEL SEGMENTS ───
+const WHEEL_SEGMENTS = [
+  { label: '🎬 Unlock!', color: '#0ea5e9', win: true  },
+  { label: '📢 +1 Ad',   color: '#8b5cf6', win: false },
+  { label: '🎬 Unlock!', color: '#10b981', win: true  },
+  { label: '📢 +1 Ad',   color: '#f59e0b', win: false },
+  { label: '🎬 Unlock!', color: '#0ea5e9', win: true  },
+  { label: '📢 +1 Ad',   color: '#ef4444', win: false },
+];
+
+function drawWheel(canvas, rotDeg) {
+  const ctx = canvas.getContext('2d');
+  const size = canvas.width;
+  const cx = size / 2, cy = size / 2, r = size / 2 - 2;
+  const n = WHEEL_SEGMENTS.length;
+  const arc = (Math.PI * 2) / n;
+  ctx.clearRect(0, 0, size, size);
+  WHEEL_SEGMENTS.forEach((seg, i) => {
+    const start = arc * i - Math.PI / 2 + (rotDeg * Math.PI / 180);
+    const end   = start + arc;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, start, end);
+    ctx.closePath();
+    ctx.fillStyle = seg.color;
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(0,0,0,0.2)';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+    // Label
+    const midAngle = start + arc / 2;
+    const tx = cx + Math.cos(midAngle) * (r * 0.65);
+    const ty = cy + Math.sin(midAngle) * (r * 0.65);
+    ctx.save();
+    ctx.translate(tx, ty);
+    ctx.rotate(midAngle + Math.PI / 2);
+    ctx.fillStyle = '#fff';
+    ctx.font = 'bold 10px Outfit,sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(seg.label, 0, 0);
+    ctx.restore();
+  });
+}
+
+// ─── GET STEP PROGRESS (multi-step system) ───
+function getStepProgress(movieId) {
+  const key = 'step_progress_' + movieId;
+  try { return JSON.parse(localStorage.getItem(key) || 'null') || { completedSteps:0, adsInStep:0 }; }
+  catch(e) { return { completedSteps:0, adsInStep:0 }; }
+}
+function saveStepProgress(movieId, data) {
+  localStorage.setItem('step_progress_' + movieId, JSON.stringify(data));
+}
+function resetStepProgress(movieId) {
+  localStorage.removeItem('step_progress_' + movieId);
+}
+
+// ─── RENDER: MULTI-STEP UNLOCK ───
+window.renderMultiStepUnlock = function(movie) {
+  const totalSteps  = parseInt(unlockSettings.totalSteps  || 3);
+  const adsPerStep  = parseInt(unlockSettings.adsPerStep  || 2);
+  const stepTexts   = unlockSettings.stepTexts  || [];
+  const sp          = getStepProgress(movie.id);
+  const completedSteps = sp.completedSteps;
+  const adsInStep   = sp.adsInStep;
+  const allDone     = completedSteps >= totalSteps;
+  const ws          = document.getElementById('watchSection');
+
+  // Build step track
+  let trackHtml = '';
+  for (let i = 0; i < totalSteps; i++) {
+    const isDone   = i < completedSteps;
+    const isActive = i === completedSteps && !allDone;
+    const cls = isDone ? 'done' : isActive ? 'active' : '';
+    const lbl = stepTexts[i] || `Step ${i+1}`;
+    trackHtml += `<div class="step-node">
+      <div class="step-circle ${cls}">${isDone ? '✓' : i+1}</div>
+      <div class="step-lbl">${lbl}</div>
+    </div>`;
+    if (i < totalSteps - 1) {
+      trackHtml += `<div class="step-line ${isDone ? 'done' : ''}"></div>`;
+    }
+  }
+
+  const pct = allDone ? 100 : Math.round(((completedSteps * adsPerStep + adsInStep) / (totalSteps * adsPerStep)) * 100);
+
+  ws.innerHTML = `
+    <div style="background:rgba(14,165,233,0.06);border:1.5px solid rgba(14,165,233,0.2);border-radius:18px;padding:20px 18px;margin-bottom:12px;">
+      <div style="font-size:.9rem;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px;">
+        ${allDone ? '🔓 All Steps Complete!' : '🔒 Multi-Step Unlock'}
+        <span style="font-size:.72rem;color:var(--text3);font-weight:400;">Step ${Math.min(completedSteps+1,totalSteps)} of ${totalSteps}</span>
+      </div>
+      <!-- Step Track -->
+      <div class="step-track">${trackHtml}</div>
+      <!-- Overall progress bar -->
+      <div style="margin-bottom:16px;">
+        <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--text3);margin-bottom:6px;">
+          <span>Overall Progress</span>
+          <span style="color:${allDone?'#10b981':'var(--primary)'};">${pct}% unlocked</span>
+        </div>
+        <div style="height:7px;background:rgba(255,255,255,0.07);border-radius:10px;overflow:hidden;">
+          <div style="height:100%;border-radius:10px;background:linear-gradient(90deg,var(--primary),var(--accent2));width:${pct}%;transition:.6s;"></div>
+        </div>
+      </div>
+      ${!allDone ? `
+        <!-- Current step ads progress -->
+        <div style="background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:14px;">
+          <div style="font-size:.78rem;color:var(--text2);margin-bottom:8px;">
+            ${stepTexts[completedSteps] || 'Current Step'}: watch <strong style="color:var(--text);">${adsPerStep} ads</strong> to complete
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            ${Array.from({length:adsPerStep},(_, i)=>`
+              <div style="width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;
+                background:${i<adsInStep?'linear-gradient(135deg,var(--primary),var(--accent2))':'rgba(255,255,255,0.06)'};
+                border:1px solid ${i<adsInStep?'transparent':'var(--border)'};
+                color:${i<adsInStep?'#fff':'var(--text3)'};">${i<adsInStep?'✓':i+1}</div>`).join('')}
+          </div>
+        </div>
+        <button class="btn-watch-ad" id="multiStepAdBtn" onclick="watchStepAd('${movie.id}')" style="width:100%;font-size:.9rem;padding:12px;">
+          📢 Watch Ad for Step ${completedSteps+1} (${adsInStep}/${adsPerStep})
+        </button>
+        <div id="multiStepCd" style="text-align:center;margin-top:8px;"></div>
+      ` : `
+        <button class="btn-watch-now" onclick="watchNow()" style="width:100%;font-size:.95rem;padding:13px;">▶ Watch Now — All Steps Complete!</button>
+        <div style="text-align:center;margin-top:10px;">
+          <button onclick="resetStepProgress('${movie.id}');renderWatchSection(currentMovie);"
+            style="background:none;border:none;color:var(--text3);font-size:.72rem;cursor:pointer;text-decoration:underline;font-family:'Outfit',sans-serif;">
+            🔄 Reset steps
+          </button>
+        </div>
+      `}
+    </div>
+    <!-- VIP skip strip -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;
+                background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;cursor:pointer;"
+         onclick="closeModal();setTimeout(openVipModal,200);">
+      <span style="font-size:1rem;">👑</span>
+      <span style="font-size:.82rem;color:var(--text2);">Skip all steps with</span>
+      <span style="font-size:.88rem;font-weight:700;background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">VIP Subscription</span>
+    </div>`;
+};
+
+// ─── WATCH STEP AD ───
+window.watchStepAd = function(movieId) {
+  if (adCooldown) { showToast('warn','⏳','Please wait for cooldown.'); return; }
+  const btn = document.getElementById('multiStepAdBtn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Opening Ad...'; }
+
+  const adUrl = resolveAdUrl(adCount);
+  if (adUrl) window.open(adUrl, '_blank');
+
+  adCooldown = true;
+  let secs = parseInt(unlockSettings.countdownEnabled ? (unlockSettings.countdownSecs || 15) : 15);
+  const cdEl = document.getElementById('multiStepCd');
+
+  const tick = () => {
+    if (cdEl) cdEl.innerHTML = `<span style="color:var(--accent);font-size:.78rem;">⏱ Wait <strong>${secs}s</strong></span>`;
+    if (btn) btn.textContent = `⏳ Wait ${secs}s...`;
+  };
+  tick();
+
+  const timer = setInterval(() => {
+    secs--;
+    if (secs <= 0) {
+      clearInterval(timer);
+      adCooldown = false;
+      adCount++;
+      const daily = incrementDailyAdCount();
+      updateDoc(doc(db, 'analytics', 'main'), { totalClicks: increment(1) }).catch(() => {});
+
+      const sp = getStepProgress(movieId);
+      const totalSteps = parseInt(unlockSettings.totalSteps || 3);
+      const adsPerStep = parseInt(unlockSettings.adsPerStep || 2);
+      sp.adsInStep++;
+
+      if (sp.adsInStep >= adsPerStep) {
+        sp.adsInStep = 0;
+        sp.completedSteps++;
+      }
+      saveStepProgress(movieId, sp);
+
+      if (sp.completedSteps >= totalSteps) {
+        showToast('success','🎉','All steps complete! Movie unlocked!');
+      } else {
+        showToast('info','✅',`Step ${sp.completedSteps+1} progress saved!`);
+      }
+      renderWatchSection(currentMovie);
+    } else { secs--; tick(); }
+  }, 1000);
+  // fix: correct tick interval
+  clearInterval(timer);
+  let s2 = parseInt(unlockSettings.countdownEnabled ? (unlockSettings.countdownSecs || 15) : 15);
+  const t2 = setInterval(() => {
+    s2--;
+    if (cdEl) cdEl.innerHTML = `<span style="color:var(--accent);font-size:.78rem;">⏱ Wait <strong>${s2}s</strong></span>`;
+    if (btn) btn.textContent = `⏳ Wait ${s2}s...`;
+    if (s2 <= 0) {
+      clearInterval(t2);
+      adCooldown = false;
+      adCount++;
+      incrementDailyAdCount();
+      updateDoc(doc(db, 'analytics', 'main'), { totalClicks: increment(1) }).catch(() => {});
+      const sp2 = getStepProgress(movieId);
+      const ts2 = parseInt(unlockSettings.totalSteps || 3);
+      const aps2 = parseInt(unlockSettings.adsPerStep || 2);
+      sp2.adsInStep++;
+      if (sp2.adsInStep >= aps2) { sp2.adsInStep = 0; sp2.completedSteps++; }
+      saveStepProgress(movieId, sp2);
+      if (sp2.completedSteps >= ts2) showToast('success','🎉','All steps complete! Movie unlocked!');
+      else showToast('info','✅',`Step progress saved! (${sp2.completedSteps} of ${ts2} done)`);
+      renderWatchSection(currentMovie);
+    }
+  }, 1000);
+};
+
+// ─── RENDER: SPIN WHEEL UNLOCK ───
+window.renderSpinWheelUnlock = function(movie) {
+  const ws = document.getElementById('watchSection');
+  const spinsDone = parseInt(localStorage.getItem('spins_' + getTodayKey()) || '0');
+  const maxSpins  = parseInt(unlockSettings.maxSpinsPerDay || 5);
+  const isWon     = localStorage.getItem('spin_won_' + movie.id) === 'true';
+
+  if (isWon) {
+    ws.innerHTML = `
+      <div style="text-align:center;padding:20px;">
+        <div style="font-size:2rem;margin-bottom:8px;">🎉</div>
+        <div style="font-size:1rem;font-weight:700;color:var(--primary);margin-bottom:10px;">You won the spin!</div>
+        <button class="btn-watch-now" onclick="watchNow()" style="width:100%;padding:13px;">▶ Watch Now — Enjoy!</button>
+        <button onclick="localStorage.removeItem('spin_won_${movie.id}');renderWatchSection(currentMovie);"
+          style="background:none;border:none;color:var(--text3);font-size:.72rem;cursor:pointer;text-decoration:underline;margin-top:8px;display:block;font-family:'Outfit',sans-serif;">
+          🔄 Reset spin
+        </button>
+      </div>`;
+    return;
+  }
+
+  ws.innerHTML = `
+    <div style="background:rgba(245,158,11,0.05);border:1.5px solid rgba(245,158,11,0.2);border-radius:18px;padding:20px;margin-bottom:12px;">
+      <div style="font-size:.9rem;font-weight:700;margin-bottom:6px;text-align:center;">🎡 Spin to Unlock!</div>
+      <div style="font-size:.76rem;color:var(--text3);text-align:center;margin-bottom:16px;">Each spin opens a sponsor ad. Win 🎬 to unlock the video!</div>
+      <div class="spin-wrap">
+        <div class="wheel-outer">
+          <div class="wheel-ptr"></div>
+          <canvas class="wheel-canvas" id="spinCanvas" width="190" height="190"></canvas>
+          <div class="wheel-hub"></div>
+        </div>
+        <button class="btn-spin" id="spinBtn" onclick="doSpin('${movie.id}')" ${spinsDone>=maxSpins?'disabled':''}>
+          ${spinsDone>=maxSpins?'🚫 Max spins reached':'🎡 Spin! ('+spinsDone+'/'+maxSpins+' used)'}
+        </button>
+        <div class="spin-result-msg" id="spinResult"></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;
+                background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;cursor:pointer;"
+         onclick="closeModal();setTimeout(openVipModal,200);">
+      <span>👑</span>
+      <span style="font-size:.82rem;color:var(--text2);">Skip the wheel with VIP</span>
+    </div>`;
+
+  // Draw initial wheel
+  const canvas = document.getElementById('spinCanvas');
+  if (canvas) drawWheel(canvas, 0);
+};
+
+window.doSpin = function(movieId) {
+  const btn = document.getElementById('spinBtn');
+  const resultEl = document.getElementById('spinResult');
+  const canvas = document.getElementById('spinCanvas');
+  if (!canvas || spinLocked) return;
+
+  spinLocked = true;
+  if (btn) btn.disabled = true;
+  if (resultEl) resultEl.textContent = '🌀 Spinning...';
+
+  // Open ad first
+  const adUrl = resolveAdUrl(adCount);
+  if (adUrl) window.open(adUrl, '_blank');
+
+  // Record spin
+  const dayKey = 'spins_' + getTodayKey();
+  const done = parseInt(localStorage.getItem(dayKey) || '0') + 1;
+  localStorage.setItem(dayKey, done);
+  incrementDailyAdCount();
+  updateDoc(doc(db, 'analytics', 'main'), { totalClicks: increment(1) }).catch(() => {});
+
+  // Random segment pick
+  const segCount = WHEEL_SEGMENTS.length;
+  const targetIdx = Math.floor(Math.random() * segCount);
+  const extraRot  = 1800 + (360 / segCount) * targetIdx;
+  let currentRot  = 0;
+
+  // Animate
+  let r = 0;
+  const speed = 15;
+  const targetR = extraRot;
+  const animCanvas = canvas;
+
+  canvas.style.transform = `rotate(${targetR}deg)`;
+
+  setTimeout(() => {
+    spinLocked = false;
+    const seg = WHEEL_SEGMENTS[targetIdx];
+    if (seg.win) {
+      localStorage.setItem('spin_won_' + movieId, 'true');
+      if (resultEl) resultEl.innerHTML = '<span style="color:#10b981;">🎉 You Won! Click Watch Now!</span>';
+      showToast('success','🎡','You won the spin! Content unlocked!');
+      setTimeout(() => renderWatchSection(currentMovie), 1500);
+    } else {
+      if (resultEl) resultEl.innerHTML = '<span style="color:var(--accent);">📢 Try again! Watch more ads.</span>';
+      const maxSpins = parseInt(unlockSettings.maxSpinsPerDay || 5);
+      if (btn && done < maxSpins) {
+        btn.disabled = false;
+        btn.textContent = `🎡 Spin! (${done}/${maxSpins} used)`;
+      } else if (btn) {
+        btn.textContent = '🚫 Max spins today';
+      }
+    }
+  }, 3600);
+};
+
+// ─── RENDER: TELEGRAM GATE ───
+window.renderTelegramGate = function(movie) {
+  const ws = document.getElementById('watchSection');
+  const tgLink = unlockSettings.telegramGateLink || 'https://t.me/';
+
+  ws.innerHTML = `
+    <div class="tg-gate-box">
+      <div class="tg-gate-icon">✈️</div>
+      <div class="tg-gate-title">Join Our Telegram to Continue</div>
+      <div class="tg-gate-sub">
+        আমাদের Telegram চ্যানেলে যুক্ত হলেই ফ্রিতে মুভি দেখার সুযোগ পাবেন।<br>
+        Join করে নিচের বাটনে ক্লিক করুন।
+      </div>
+      <a href="${tgLink}" target="_blank" style="text-decoration:none;">
+        <button class="btn-tg-join">✈️ Join Telegram Channel</button>
+      </a>
+      <button class="btn-tg-verify" onclick="verifyTelegramJoin('${movie.id}')">
+        ✅ I've Joined — Continue
+      </button>
+    </div>`;
+};
+
+window.verifyTelegramJoin = function(movieId) {
+  telegramJoined = true;
+  sessionStorage.setItem('tg_joined', '1');
+  showToast('success','✈️','Welcome! Now unlock your video below.');
+  renderWatchSection(currentMovie);
+};
+
+// ─── RENDER: PREVIEW FLOW ───
+window.renderPreviewFlow = function(movie) {
+  const ws = document.getElementById('watchSection');
+  const duration = parseInt(unlockSettings.previewDuration || 10);
+
+  ws.innerHTML = `
+    <div class="preview-box">
+      <div class="preview-ring" id="previewRing">
+        <span id="previewSecs">${duration}</span>
+      </div>
+      <div class="preview-status" id="previewStatus">🎬 Preview starting in <strong>${duration}s</strong> — then you'll need to unlock to watch the full video.</div>
+      <button class="btn-watch-ad" id="previewStartBtn" onclick="startPreview('${movie.id}',${duration})" style="margin-top:12px;width:100%;">
+        ▶ Start ${duration}s Preview
+      </button>
+    </div>`;
+};
+
+window.startPreview = function(movieId, duration) {
+  const btn = document.getElementById('previewStartBtn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Preview playing...'; }
+
+  // Open the actual video link briefly (simulate preview)
+  if (currentMovie?.videoLink) window.open(currentMovie.videoLink, '_blank');
+
+  let secs = duration;
+  const ring = document.getElementById('previewRing');
+  const secsEl = document.getElementById('previewSecs');
+  const statusEl = document.getElementById('previewStatus');
+
+  const t = setInterval(() => {
+    secs--;
+    if (secsEl) secsEl.textContent = secs;
+    const pct = ((duration - secs) / duration) * 360;
+    if (ring) ring.style.background = `conic-gradient(var(--primary) ${pct}deg, rgba(255,255,255,.06) ${pct}deg)`;
+    if (statusEl) statusEl.innerHTML = `🎬 Preview: <strong>${secs}s</strong> remaining...`;
+    if (secs <= 0) {
+      clearInterval(t);
+      previewPlayed[movieId] = true;
+      showToast('info','🔒','Preview ended! Unlock below to watch the full video.');
+      renderWatchSection(currentMovie);
+    }
+  }, 1000);
+};
+
+// ─── RENDER: SCENE PARTS UNLOCK ───
+window.renderSceneUnlock = function(movie) {
+  const ws          = document.getElementById('watchSection');
+  const parts       = parseInt(unlockSettings.sceneParts || 3);
+  const unlockedParts = getSceneProgress(movie.id);
+  const currentPart = sceneCurrentPart[movie.id] || 0;
+
+  // Build tabs
+  let tabsHtml = '';
+  for (let i = 0; i < parts; i++) {
+    const isDone = i < unlockedParts;
+    const isAct  = i === currentPart;
+    let cls = isAct ? 'active' : (isDone ? 's-done' : 's-locked');
+    const icon = isDone ? '✅' : (isAct ? '▶' : '🔒');
+    tabsHtml += `<button class="scene-tab-btn ${cls}" onclick="switchScenePart('${movie.id}',${i},${parts})">${icon} Part ${i+1}</button>`;
+  }
+
+  const partUnlocked = currentPart < unlockedParts;
+
+  ws.innerHTML = `
+    <div style="background:rgba(14,165,233,0.05);border:1.5px solid rgba(14,165,233,0.18);border-radius:18px;padding:20px;margin-bottom:12px;">
+      <div style="font-size:.9rem;font-weight:700;margin-bottom:12px;">🎞️ Scene-Based Unlock</div>
+      <div class="scene-tabs">${tabsHtml}</div>
+      <div id="scenePartBody"></div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;
+                background:rgba(245,158,11,0.04);border:1px solid rgba(245,158,11,0.18);border-radius:12px;cursor:pointer;"
+         onclick="closeModal();setTimeout(openVipModal,200);">
+      <span>👑</span><span style="font-size:.82rem;color:var(--text2);">Unlock all parts with VIP</span>
+    </div>`;
+
+  renderScenePartBody(movie, currentPart, parts, unlockedParts);
+};
+
+function renderScenePartBody(movie, part, totalParts, unlockedParts) {
+  const el = document.getElementById('scenePartBody');
+  if (!el) return;
+  const partUnlocked = part < unlockedParts;
+  const req = parseInt(requiredAds);
+  const partKey = 'scene_ads_' + movie.id + '_part' + part;
+  const partAds = parseInt(localStorage.getItem(partKey) || '0');
+  const pDone = partAds >= req;
+
+  if (partUnlocked || pDone) {
+    el.innerHTML = `
+      <div style="text-align:center;padding:12px 0;">
+        <div style="font-size:.85rem;color:#10b981;margin-bottom:12px;">✅ Part ${part+1} unlocked!</div>
+        <button class="btn-watch-now" onclick="watchNow()" style="width:100%;padding:12px;">▶ Watch Part ${part+1}</button>
+        ${part+1 < totalParts ? `<div style="font-size:.75rem;color:var(--text3);margin-top:10px;">Unlock Part ${part+2} to continue the story →</div>` : ''}
+      </div>`;
+    if (!partUnlocked && pDone) setSceneProgress(movie.id, part+1);
+  } else {
+    const pct = Math.round((partAds / req) * 100);
+    el.innerHTML = `
+      <div style="font-size:.8rem;color:var(--text2);margin-bottom:12px;">
+        Part ${part+1} requires watching <strong style="color:var(--text);">${req} ads</strong> to unlock.
+      </div>
+      <div style="height:7px;background:rgba(255,255,255,.07);border-radius:10px;overflow:hidden;margin-bottom:12px;">
+        <div style="height:100%;background:linear-gradient(90deg,var(--primary),var(--accent2));width:${pct}%;transition:.5s;"></div>
+      </div>
+      <button class="btn-watch-ad" id="sceneAdBtn" onclick="watchSceneAd('${movie.id}',${part})" style="width:100%;padding:12px;">
+        📢 Unlock Part ${part+1} (${partAds}/${req} ads)
+      </button>
+      <div id="sceneCd" style="text-align:center;margin-top:8px;"></div>`;
+  }
+}
+
+window.switchScenePart = function(movieId, part, totalParts) {
+  sceneCurrentPart[movieId] = part;
+  const unlockedParts = getSceneProgress(movieId);
+  // Re-render tabs active state
+  document.querySelectorAll('.scene-tab-btn').forEach((btn, i) => {
+    btn.classList.remove('active');
+    if (i === part) btn.classList.add('active');
+  });
+  renderScenePartBody(currentMovie, part, totalParts, unlockedParts);
+};
+
+window.watchSceneAd = function(movieId, part) {
+  if (adCooldown) { showToast('warn','⏳','Please wait for cooldown.'); return; }
+  const btn = document.getElementById('sceneAdBtn');
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ Opening Ad...'; }
+  const adUrl = resolveAdUrl(adCount);
+  if (adUrl) window.open(adUrl, '_blank');
+  adCooldown = true;
+  let secs = parseInt(unlockSettings.countdownSecs || 15);
+  const cdEl = document.getElementById('sceneCd');
+  const tick = () => { if(cdEl) cdEl.innerHTML = `<span style="color:var(--accent);font-size:.78rem;">⏱ Wait <strong>${secs}s</strong></span>`; if(btn) btn.textContent=`⏳ Wait ${secs}s...`; };
+  tick();
+  const t = setInterval(() => {
+    secs--;
+    if (secs <= 0) {
+      clearInterval(t);
+      adCooldown = false;
+      const partKey = 'scene_ads_' + movieId + '_part' + part;
+      const current = parseInt(localStorage.getItem(partKey) || '0') + 1;
+      localStorage.setItem(partKey, current);
+      incrementDailyAdCount();
+      updateDoc(doc(db, 'analytics', 'main'), { totalClicks: increment(1) }).catch(() => {});
+      adCount++;
+      const req = parseInt(requiredAds);
+      if (current >= req) {
+        setSceneProgress(movieId, part+1);
+        showToast('success','🎉',`Part ${part+1} unlocked! Enjoy watching!`);
+      } else {
+        showToast('info','✅',`Ad ${current}/${req} counted for Part ${part+1}`);
+      }
+      renderWatchSection(currentMovie);
+    } else { secs--; tick(); }
+  }, 1000);
+};
+
+// ─── RENDER: REWARD UNLOCK ───
+function renderRewardStrip(movieId) {
+  if (!unlockSettings.rewardEnabled) return '';
+  const required = parseInt(unlockSettings.rewardAdsRequired || 10);
+  const limit    = parseInt(unlockSettings.rewardDailyLimit || 1);
+  const today    = getDailyAdCount();
+  const used     = getDailyRewardUsed();
+  const canClaim = today >= required && used < limit;
+
+  return `
+    <div class="reward-strip">
+      <div class="reward-info">
+        <div class="reward-lbl">🎁 Daily Reward Unlock</div>
+        <div class="reward-sub">Watch ${required} ads → get 1 free unlock · Today: ${today}/${required} ads · Used: ${used}/${limit}</div>
+      </div>
+      <button class="btn-reward" id="rewardBtn" onclick="claimReward('${movieId}')" ${canClaim?'':'disabled'}>
+        ${canClaim?'🎁 Claim':'🔒 Earn More'}
+      </button>
+    </div>`;
+}
+
+window.claimReward = function(movieId) {
+  const limit = parseInt(unlockSettings.rewardDailyLimit || 1);
+  if (getDailyRewardUsed() >= limit) { showToast('warn','⚠️','Daily reward limit reached.'); return; }
+  incrementDailyRewardUsed();
+  // Give a full unlock for this movie
+  saveProgress(movieId, requiredAds);
+  adCount = requiredAds;
+  showToast('success','🎁','Daily reward claimed! Movie unlocked!');
+  renderWatchSection(currentMovie);
+};
+
 
 // ─── START ───
 init().then(() => checkUrlMovieParam()).catch(console.error);
